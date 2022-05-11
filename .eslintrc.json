@@ -8,8 +8,9 @@
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "script",
     },
     "rules": {
+        "require-jsdoc":"off"
     }
 }

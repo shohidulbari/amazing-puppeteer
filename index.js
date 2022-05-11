@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const cookieParsar = require('cookie-parser');
+const ServiceFactory = require('./src/service/service-factory');
 
 const app = express();
 
@@ -18,11 +19,7 @@ app.get('/', function(req, res) {
   res.render('pages/index');
 });
 
-app.post('/search-webpage', function(req, res) {
-  console.log(req.params);
-  console.log(req.body);
-  res.end();
-});
+app.post('/analyze-webpage', ServiceFactory);
 
 app.listen(8080);
 console.log('Server is listening on port 8080');
