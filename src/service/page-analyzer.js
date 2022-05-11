@@ -1,6 +1,6 @@
 const validUrl = require('valid-url');
 
-async function PageAnalyzer (req, res, next) {
+async function pageAnalyzer(req, res, next) {
   const {pageURL} = req.body;
   console.log(pageURL);
   if (!validUrl.isUri(pageURL)) {
@@ -8,4 +8,4 @@ async function PageAnalyzer (req, res, next) {
   }
 }
 
-module.exports = PageAnalyzer;
+module.exports = pageAnalyzer;

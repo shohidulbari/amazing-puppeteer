@@ -1,10 +1,10 @@
-const PageAnalyzer = require("./page-analyzer");
+const pageAnalyzer = require('./page-analyzer');
 
 async function ServiceFactory(req, res, next) {
   const route = req.url;
   switch (route) {
     case '/analyze-webpage':
-      await PageAnalyzer(req, res, next);
+      await pageAnalyzer(req, res, next);
   }
 }
 
