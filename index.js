@@ -18,5 +18,11 @@ app.get('/', function(req, res) {
   res.render('pages/index');
 });
 
+app.post('/search-webpage', function(req, res) {
+  console.log(req.params);
+  console.log(req.body);
+  res.end();
+});
+
 app.listen(8080);
 console.log('Server is listening on port 8080');

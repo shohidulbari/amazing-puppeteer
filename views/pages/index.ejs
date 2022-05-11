@@ -10,15 +10,26 @@
 </header>
 
 <main>
-  <div class="jumbotron">
-    <h1>This is great</h1>
-    <p>Welcome to templating using EJS</p>
+  <div class="container">
+    <form action="/search-webpage" method="post">
+        <div class="form-group">
+            <label for="web-page-address">Enter Web Page Address</label>
+            <input type="text" name="page" class="form-control" id="web-page-address" placeholder="Enter web page url" />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
   </div>
 </main>
 
 <footer>
   <%- include('../partials/footer'); %>
 </footer>
+
+<script>
+    function submitForm() {
+
+    }
+</script>
 
 </body>
 </html>
